@@ -1,6 +1,6 @@
 class Pokemon
 
-  attr_reader :id
+  attr_reader :id, :vet_id
   attr_accessor :name, :type, :date_caught, :treatment_notes
 
   def initialize(options)
