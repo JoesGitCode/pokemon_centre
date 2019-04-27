@@ -22,6 +22,12 @@ class Pokemon
     @id = results.first()['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM pokemons WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.show_all()
     sql = "SELECT * FROM pokemons"
     pokemon_data = SqlRunner.run(sql)
