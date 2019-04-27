@@ -15,10 +15,16 @@ class Pokemon
   end
 
   def save()
-    sql = "INSERT INTO pokemon (name, type, date_caught, treatment_notes, vet_id)
+    sql = "INSERT INTO pokemons (name, type, date_caught, treatment_notes, vet_id)
     VALUES ($1, $2, $3, $4, $5) RETURNING id"
     values = [@name, @type, @date_caught, @treatment_notes, @vet_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+
+  # def self.show_all()
+  #   sql = "SELECT * FROM pokemons"
+  #   results = SqlRunner.run(sql)
+  #
+  # end
 end
