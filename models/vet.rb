@@ -25,4 +25,9 @@ class Vet
   def self.map_items(vet_data)
     return vet_data.map { |vet| Vet.new(vet) }
   end
+
+  def self.delete_all()
+    sql = "DELETE FROM vets"
+    SqlRunner.run(sql)
+  end
 end

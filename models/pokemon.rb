@@ -33,4 +33,9 @@ class Pokemon
     return pokemon_data.map { |pokemon| Pokemon.new(pokemon) }
   end
 
+  def self.delete_all
+    sql = "DELETE FROM pokemons"
+    results = SqlRunner.run(sql)
+  end
+
 end
