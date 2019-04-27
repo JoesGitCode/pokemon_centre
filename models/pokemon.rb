@@ -22,9 +22,15 @@ class Pokemon
     @id = results.first()['id'].to_i
   end
 
-  # def self.show_all()
-  #   sql = "SELECT * FROM pokemons"
-  #   results = SqlRunner.run(sql)
-  #
-  # end
+  def self.show_all()
+    sql = "SELECT * FROM pokemons"
+    pokemon_data = SqlRunner.run(sql)
+    pokemons = map_items(pokemon_data)
+    return pokemons
+  end
+
+  def self.map_items(pokemon_data)
+    return pokemon_data.map { |pokemon| Pokemon.new(pokemon) }
+  end
+
 end

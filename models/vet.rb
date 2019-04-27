@@ -14,4 +14,15 @@ class Vet
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+
+  def self.show_all()
+    sql = "SELECT * FROM vets"
+    vet_data = SqlRunner.run(sql)
+    vets = map_items(vet_data)
+    return vets
+  end
+
+  def self.map_items(vet_data)
+    return vet_data.map { |vet| Vet.new(vet) }
+  end
 end
