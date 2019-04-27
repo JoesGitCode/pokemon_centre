@@ -7,7 +7,7 @@ require('pry-byebug')
 
 vet1 = Vet.new({"name" => "joy"})
 vet1.name = "Nurse Joy"
-vet1.update()
+# vet1.update()
 # vet1.save()
 # p Vet.show_all()
 
