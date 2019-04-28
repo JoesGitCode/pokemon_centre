@@ -10,7 +10,7 @@ get '/pokemon' do
 end
 
 get '/pokemon/new' do
-  # @new_pokemon = Pokemon.save()
+  @vets = Vet.show_all()
   erb(:"pokemon/new")
 end
 

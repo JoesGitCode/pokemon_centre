@@ -20,7 +20,21 @@
 
     <div class="form-item">
       <label for="treatment_notes">Treatment Notes</label>
-      <input type="message" name="treatment_notes" id="treatment_notes">
+      <input type="textarea" rows="8" cols="80" name="treatment_notes" id="treatment_notes">
+    </div>
+
+    <div class="form-item">
+      <label for="vet">Assign to</label>
+      <select class="" name="vet" id="vet">
+        <% @vets.each do |vet| %>
+          <option value=<%= vet.id %>><%= vet.name %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-item">
+      <label for="reset"></label>
+      <input type="reset" name="reset" id="reset">
     </div>
 
     <div class="form-item">
