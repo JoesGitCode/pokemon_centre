@@ -4,7 +4,7 @@ require_relative('../models/pokemon.rb')
 require_relative('../models/vet.rb')
 also_reload('./models/*')
 
-get '/' do
-  # @pokemon = Pokemon.show_all()
-  erb(:index)
+get '/pokemon' do
+  @pokemon = Pokemon.show_all()
+  erb(:"pokemon/index")
 end
