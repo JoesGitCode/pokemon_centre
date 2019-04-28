@@ -5,6 +5,5 @@ require_relative('controllers/vet_controller.rb')
 also_reload('./models/*')
 
 get '/' do
-  # @pokemon = Pokemon.show_all()
   erb(:index)
 end
