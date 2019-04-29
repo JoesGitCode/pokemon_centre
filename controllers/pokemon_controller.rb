@@ -14,7 +14,16 @@ get '/pokemon/new' do
   erb(:"pokemon/new")
 end
 
+get '/pokemon/added' do
+  erb(:"pokemon/added")
+end
+
+post '/pokemon' do
+  Pokemon.delete()
+  redirect to '/pokemon'
+end
+
 post '/pokemon' do
   Pokemon.new(params).save()
-  redirect to '/pokemon'
+  redirect to '/pokemon/added'
 end

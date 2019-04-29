@@ -2,7 +2,7 @@ require_relative('../models/pokemon.rb')
 require_relative('../models/vet.rb')
 require('pry-byebug')
 
-Pokemon.delete_all()
+# Pokemon.delete_all()
 Vet.delete_all()
 
 vet1 = Vet.new({"name" => "joy viridian"})
@@ -21,6 +21,8 @@ pokemon2.save()
 # pokemon1.name = "bulbasaur"
 # pokemon1.update()
 pokemon1.save()
+
+Pokemon.delete_by_id(55)
 # Pokemon.show_all()
 
 

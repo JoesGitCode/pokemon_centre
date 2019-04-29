@@ -1,4 +1,5 @@
-root {
+body {
   list-style: none;
   text-decoration: none;
+  background: red;
 }

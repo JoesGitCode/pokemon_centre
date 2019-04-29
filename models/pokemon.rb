@@ -53,4 +53,10 @@ class Pokemon
     results = SqlRunner.run(sql)
   end
 
+  def self.delete_by_id(id)
+    sql = "DELETE FROM pokemons WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+  end
+
 end
