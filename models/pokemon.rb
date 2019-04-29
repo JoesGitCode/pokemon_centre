@@ -59,4 +59,11 @@ class Pokemon
     results = SqlRunner.run(sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM pokemons WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    pokemon = Pokemon.new(result)
+    return pokemon
+  end
 end

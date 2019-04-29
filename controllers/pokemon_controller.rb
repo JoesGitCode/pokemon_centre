@@ -18,10 +18,15 @@ get '/pokemon/added' do
   erb(:"pokemon/added")
 end
 
-post '/pokemon' do
-  Pokemon.delete()
-  redirect to '/pokemon'
+get '/pokemon/:id' do
+  @pokemon = Pokemon.find(params['id'])
+  erb(:show)
 end
+
+# post '/pokemon' do
+#   Pokemon.delete()
+#   redirect to '/pokemon'
+# end
 
 post '/pokemon' do
   Pokemon.new(params).save()

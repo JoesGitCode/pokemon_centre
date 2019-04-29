@@ -24,6 +24,7 @@ pokemon1.save()
 
 Pokemon.delete_by_id(55)
 # Pokemon.show_all()
+p Pokemon.find(60)
 
 
 # binding.pry
