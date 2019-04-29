@@ -1,6 +1,25 @@
-body {
+* {
   list-style: none;
   text-decoration: none;
-  background: red;
-  font-size: 5rem;
+  font-size: 1rem;
+}
+
+div.pokeball {
+  color: white;
+  width: 20vw;
+  height: 20vw;
+  background: linear-gradient( 0deg, white, white 49%, black 50%, white 51%, red 51% );
+  border-radius: 50%;
+  border: 1px black solid;
+  display: flex;
+}
+
+div.pokeball:hover {
+  color: white;
+  width: 20vw;
+  height: 20vw;
+  background: linear-gradient( 0deg, white, white 49%, black 50%, white 51%, #5A4198 51% );
+  border-radius: 50%;
+  border: 1px black solid;
+  display: flex;
 }

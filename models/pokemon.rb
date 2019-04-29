@@ -31,6 +31,11 @@ class Pokemon
     SqlRunner.run(sql, values)
   end
 
+  def vet
+    vet = Vet.find(@vet_id)
+    return vet
+  end
+
   def delete()
     sql = "DELETE FROM pokemons WHERE id = $1"
     values = [@id]

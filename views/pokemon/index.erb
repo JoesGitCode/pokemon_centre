@@ -1,11 +1,11 @@
 <% @pokemon.each do |pokemon| pokemon%>
 
-<div class="item_container">
+<div class="pokeball">
   Name: <%= pokemon.name %>
   Type: <%= pokemon.type %>
   Date Caught: <%= pokemon.date_caught %>
   Treatment Notes: <%= pokemon.treatment_notes %>
-  Assigned to: <%= pokemon.vet_id %>
-  <a href="/pokemon/<%=pokemon.id%>">Edit</a>
+  Assigned to: <a href="/vets/<%pokemon.vet.id%>"><%= pokemon.vet.name %></a>
+  <a href="/pokemon/<%=pokemon.id%>">Show</a>
 <% end %>
 </div>

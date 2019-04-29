@@ -1,1 +1,7 @@
 <h1>shoooow</h1>
+
+<form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+<a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
+
+<%= @pokemon.name %>
