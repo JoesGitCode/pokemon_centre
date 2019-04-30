@@ -27,6 +27,13 @@ class Vet
     SqlRunner.run(sql, values)
   end
 
+  def show_pokemons
+    sql = "SELECT * FROM pokemons WHERE vet_id = $1 "
+    values = [@id]
+    allpokemons = SqlRunner.run(sql, values)
+    allpokemons.map { |pokemon| pokemon }
+  end
+
   def self.show_all()
     sql = "SELECT * FROM vets"
     vet_data = SqlRunner.run(sql)
