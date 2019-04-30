@@ -24,10 +24,10 @@ post '/pokemon' do
   redirect to '/pokemon/added'
 end
 
-
-get '/pokemon/:id' do
+get '/pokemon/:id/edit' do
   @pokemon = Pokemon.find(params['id'])
-  erb(:"pokemon/show")
+  @vets = Vet.show_all()
+  erb (:"pokemon/edit")
 end
 
 post '/pokemon/:id/delete' do
@@ -36,15 +36,14 @@ post '/pokemon/:id/delete' do
   redirect to '/pokemon'
 end
 
-get '/pokemon/:id/edit' do
-  @pokemon = Pokemon.show_all
-  @vet = Vet.show_all
-  erb (:"pokemon/edit")
-end
-
 post '/pokemon/:id/edit' do
   pokemon = Pokemon.find(params['id'])
   pokemon.update
   pokemon.save
   redirect to '/pokemon'
+end
+
+get '/pokemon/:id' do
+  @pokemon = Pokemon.find(params['id'])
+  erb(:"pokemon/show")
 end
