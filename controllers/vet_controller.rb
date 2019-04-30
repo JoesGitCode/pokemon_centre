@@ -5,13 +5,14 @@ also_reload('../models/*')
 
 get '/vets' do
   @vets = Vet.show_all()
-  erb (:"vets/index")
+  erb(:"vets/index")
 end
 
 get '/vets/new' do
-  erb (:"vets/new")
+  erb(:"vets/new")
 end
 
 post '/vets' do
   Vet.new(params).save()
+  redirect to '/vets'
 end
