@@ -1,0 +1,18 @@
+<%=@pokemon.treatment_notes %>
+<div class="form-container">
+  <form method="POST" action="/pokemon">
+    <div class="form-item">
+      <label for="treatment_notes">Treatment Options</label>
+      <select class="form-item" name="treatment_notes">
+        <option value="">Antidote</option>
+        <option value="">Paralyze Heal</option>
+        <option value="">Ice Heal</option>
+        <option value="">Awakening</option>
+      </select>
+    </div>
+
+    <div class="form-item">
+      <input type="submit" value="Heal Pokemon">
+    </div>
+  </form>
+</div>

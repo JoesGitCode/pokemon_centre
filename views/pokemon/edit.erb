@@ -15,12 +15,17 @@
 
     <div class="form-item">
       <label for="date_caught">Date Caught</label>
-      <input type="number" name="da" id="date_caught" value="<%=@pokemon.date_caught %>">
+      <input type="number" name="date_caught" id="date_caught" value="<%=@pokemon.date_caught %>">
     </div>
 
     <div class="form-item">
       <label for="treatment_notes">Treatment Notes</label>
-      <input type="textarea" rows="8" cols="80" name="treatment_notes" id="treatment_notes" value="<%=@pokemon.treatment_notes %>">
+      <select class="treatment_notes" name="treatment_notes" id="treatment_notes" value="<%=@pokemon.treatment_notes%>">
+          <option value="">Poisoned</option>
+          <option value="">Paralyzed</option>
+          <option value="">Frozen</option>
+          <option value="">Asleep</option>
+      </select>
     </div>
 
     <div class="form-item">

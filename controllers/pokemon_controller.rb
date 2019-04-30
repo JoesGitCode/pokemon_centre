@@ -47,3 +47,8 @@ get '/pokemon/:id' do
   @pokemon = Pokemon.find(params['id'])
   erb(:"pokemon/show")
 end
+
+get '/pokemon/:id/heal' do
+  @pokemon = Pokemon.find(params['id'])
+  erb(:"pokemon/heal")
+end
