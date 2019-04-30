@@ -12,11 +12,13 @@ get '/vets/new' do
   erb(:"vets/new")
 end
 
-get '/vets/:id' do
-  
-end
 
 post '/vets' do
   Vet.new(params).save()
   redirect to '/vets'
+end
+
+get '/vets/:id' do
+  @vet = Vet.find(params['id'])
+  erb(:"vets/show")
 end

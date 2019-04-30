@@ -1,0 +1,12 @@
+<h1>shoooow</h1>
+
+<%pokemon_array = @vet.show_pokemons %>
+
+<% pokemon_array.each do |pokemon| pokemon%>
+
+<div class="pokeball">
+  Name: <%= pokemon['name'] %>
+  <a href="/pokemon/<%=pokemon['id']%>">More Information</a>
+
+<% end %>
+</div>

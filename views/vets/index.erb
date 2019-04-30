@@ -1,5 +1,6 @@
 <% @vets.each do |vet| vet %>
   Name:<%= vet.name %>
-<% end %>
 
+  <a href="/vets/<%=vet.id%>">Show</a>
+  <% end %>
 <a href="/vets/new">Add Vet</a>
