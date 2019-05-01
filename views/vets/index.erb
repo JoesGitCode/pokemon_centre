@@ -1,6 +1,12 @@
-<% @vets.each do |vet| vet %>
+<h1>All Vets</h1>
+
+<div class="index-items">
+  <% @vets.each do |vet| vet %>
   Name:<%= vet.name %>
 
   <a href="/vets/<%=vet.id%>">Show</a>
   <% end %>
+
+</div>
+
 <a href="/vets/new">Add Vet</a>

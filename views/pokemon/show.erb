@@ -1,7 +1,28 @@
-<h1>shoooow</h1>
+<h1><%=@pokemon.name%>'s Information</h1>
 
 <form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
 
 <a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
 
-<%= @pokemon.name %>
+<div class="index-container">
+  <div class="index-items">
+    Name: <%= @pokemon.name %>
+  </div>
+
+  <div class="index-items">
+    Type: <%= @pokemon.type %>
+  </div>
+
+  <div class="index-items">
+    Date Caught: <%= @pokemon.date_caught %>
+  </div>
+
+  <div class="index-items">
+    Treatment Notes: <%= @pokemon.treatment_notes %>
+  </div>
+
+  <div class="index-items">
+    Assigned to: <a href="/vets/<%=@pokemon.vet.id%>"><%= @pokemon.vet.name %></a>
+  </div>
+
+</div>

@@ -4,7 +4,7 @@
   <%=@pokemon.treatment_notes %>
 </h3>
 <div class="form-container">
-  <form method="POST" action="/pokemon">
+  <form method="POST" action="/pokemon/heal">
     <div class="form-item">
       <label for="treatment_notes">Please choose a treatment</label>
       <select class="form-item" name="treatment_notes">
@@ -18,4 +18,4 @@
   </form>
 </div>
 
-<form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Heal Pokemon"></form>
+<form action="/pokemon/<%= @pokemon.id %>/heal" method="POST"><input type="submit" value="Heal Pokemon"></form>

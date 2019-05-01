@@ -15,8 +15,8 @@ get '/pokemon/new' do
   erb(:"pokemon/new")
 end
 
-get '/pokemon/added' do
-  erb(:"pokemon/added")
+get '/pokemon/healed' do
+  erb(:"pokemon/healed")
 end
 
 post '/pokemon' do
@@ -49,7 +49,13 @@ get '/pokemon/:id' do
   erb(:"pokemon/show")
 end
 
-# get '/pokemon/:id/heal' do
-#   @pokemon = Pokemon.find(params['id'])
-#   erb(:"pokemon/heal")
-# end
+get '/pokemon/:id/heal' do
+  @pokemon = Pokemon.find(params['id'])
+  erb(:"pokemon/heal")
+end
+
+post '/pokemon/:id/heal' do
+  pokemon = Pokemon.find(params['id'])
+  pokemon.delete
+  redirect to '/pokemon/healed'
+end
