@@ -26,8 +26,8 @@ class Pokemon
     sql = "UPDATE pokemons SET
     (name, type, date_caught, treatment_notes, vet_id)
     = ($1, $2, $3, $4, $5)
-    WHERE id = $5"
-    values = [@name, @type, @date_caught, @treatment_notes, @vet_id]
+    WHERE id = $6"
+    values = [@name, @type, @date_caught, @treatment_notes, @vet_id, @id]
     SqlRunner.run(sql, values)
   end
 

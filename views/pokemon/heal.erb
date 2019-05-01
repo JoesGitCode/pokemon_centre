@@ -1,8 +1,12 @@
-<%=@pokemon.treatment_notes %>
+
+<h3>
+  This pokemon is:
+  <%=@pokemon.treatment_notes %>
+</h3>
 <div class="form-container">
   <form method="POST" action="/pokemon">
     <div class="form-item">
-      <label for="treatment_notes">Treatment Options</label>
+      <label for="treatment_notes">Please choose a treatment</label>
       <select class="form-item" name="treatment_notes">
         <option value="">Antidote</option>
         <option value="">Paralyze Heal</option>
@@ -11,8 +15,6 @@
       </select>
     </div>
 
-    <div class="form-item">
-      <input type="submit" value="Heal Pokemon">
-    </div>
+<form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Heal Pokemon"></form>
   </form>
 </div>

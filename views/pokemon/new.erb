@@ -20,17 +20,17 @@
 
     <div class="form-item">
       <label for="treatment_notes">Treatment Notes</label>
-      <select class="form-item" name="treatment_notes">
-        <option value="">Poisoned</option>
-        <option value="">Paralyzed</option>
-        <option value="">Frozen</option>
-        <option value="">Asleep</option>
+      <select name="treatment_notes" id="treatment_notes">
+        <option value="Poisoned">Poisoned</option>
+        <option value="Paralyzed">Paralyzed</option>
+        <option value="Frozen">Frozen</option>
+        <option value="Asleep">Asleep</option>
       </select>
     </div>
 
     <div class="form-item">
       <label for="vet">Assign to</label>
-      <select class="" name="vet_id" id="vet">
+      <select name="vet_id" id="vet">
         <% @vets.each do |vet| %>
           <option value=<%= vet.id %>><%= vet.name %></option>
         <% end %>
