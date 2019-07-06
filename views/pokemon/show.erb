@@ -1,8 +1,6 @@
 <h1><%=@pokemon.name%>'s Information</h1>
 
-<form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
 
-<a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
 
 <div class="index-container">
   <div class="index-items">
@@ -24,5 +22,9 @@
   <div class="index-items">
     Assigned to: <a href="/vets/<%=@pokemon.vet.id%>"><%= @pokemon.vet.name %></a>
   </div>
+
+  <a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
+  <form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
 
 </div>

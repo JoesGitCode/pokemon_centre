@@ -1,38 +1,37 @@
 <h1>All Pokemon</h1>
 
 
-<% @pokemon.each do |pokemon| pokemon%>
 
 <div class="index-container">
-  <div class="index-items">
+  <% @pokemon.each do |pokemon| pokemon%>
 
-    Name: <%= pokemon.name %>
+  <div class="index-wrapper">
+
+    <div class="index-items">
+      Name: <%= pokemon.name %>
+    </div>
+
+    <div class="index-items">
+      Type: <%= pokemon.type %>
+    </div>
+
+    <div class="index-items">
+      Age: <%= pokemon.date_caught %>
+    </div>
+
+    <div class="index-items">
+      Treatment Notes: <%= pokemon.treatment_notes %>
+    </div>
+
+    <div class="index-items">
+      Assigned to: <%= pokemon.vet.name %>
+    </div>
+
+    <div class="index-items small-button">
+      <a href="/pokemon/<%=pokemon.id%>">Show</a>
+    </div>
   </div>
+  <% end %>
 
-  <div class="index-items">
 
-    Type: <%= pokemon.type %>
-  </div>
-
-  <div class="index-items">
-
-    Date Caught: <%= pokemon.date_caught %>
-  </div>
-
-  <div class="index-items">
-    Treatment Notes: <%= pokemon.treatment_notes %>
-
-  </div>
-
-  <div class="index-items">
-    Assigned to: <a href="/vets/<%=pokemon.vet.id%>"><%= pokemon.vet.name %></a>
-
-  </div>
-
-  <div class="index-items">
-    <a href="/pokemon/<%=pokemon.id%>">Show</a>
-
-  </div>
-
-<% end %>
 </div>

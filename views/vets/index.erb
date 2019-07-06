@@ -2,7 +2,7 @@
 
 <div class="index-items">
   <% @vets.each do |vet| vet %>
-  Name:<%= vet.name %>
+  Name: <%= vet.name %>
 
   <a href="/vets/<%=vet.id%>">Show</a>
   <% end %>

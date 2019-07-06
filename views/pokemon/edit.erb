@@ -4,22 +4,22 @@
   <form method="POST" action="/pokemon/<%=@pokemon.id%>">
 
     <div class="form-item">
-      <label for="name">Name</label>
+      <label for="name">Name: </label>
       <input type="text" name="name" id="name" value="<%=@pokemon.name %>">
     </div>
 
     <div class="form-item">
-      <label for="type">Type</label>
+      <label for="type">Type: </label>
       <input type="text" name="type" id="type" value="<%=@pokemon.type %>">
     </div>
 
     <div class="form-item">
-      <label for="date_caught">Date Caught</label>
+      <label for="date_caught">Age: </label>
       <input type="number" name="date_caught" id="date_caught" value="<%=@pokemon.date_caught %>">
     </div>
 
     <div class="form-item">
-      <label for="treatment_notes">Treatment Notes</label>
+      <label for="treatment_notes">Treatment Notes: </label>
       <select class="treatment_notes" name="treatment_notes" id="treatment_notes" value="<%=@pokemon.treatment_notes%>">
         <option value="Poisoned">Poisoned</option>
         <option value="Paralyzed">Paralyzed</option>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-item">
-      <label for="vet">Assign to</label>
+      <label for="vet">Assign to: </label>
       <select class="vet-select" name="vet_id" id="vet">
         <% @vets.each do |vet| %>
           <% if vet.id == @pokemon.vet_id %>
