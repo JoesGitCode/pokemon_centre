@@ -1,0 +1,23 @@
+div.pokeball {
+  color: white;
+  width: 20vw;
+  height: 20vw;
+  background: linear-gradient( 0deg, white, white 49%, black 50%, white 51%, #F81B1B 51% );
+  border-radius: 50%;
+  border: 1px black solid;
+  display: flex;
+  animation: wobble 0.5s forwards;
+  animation-iteration-count: 7;
+  position: absolute;
+  right: 30%;
+  top: 25%;
+}
+
+@keyframes wobble {
+  from {
+    background: linear-gradient( 330deg, #F9F011, white 49%, black 50%, white 51%, #F9F011 51% );
+  }
+  to {
+    background: linear-gradient( 0deg, white, white 49%, black 50%, white 51%, #F81B1B 51% );
+  }
+}
