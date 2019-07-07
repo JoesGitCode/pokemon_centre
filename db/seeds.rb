@@ -13,20 +13,31 @@ vet1.save()
 vet2.save()
 # p Vet.show_all()
 
-pokemon1 = Pokemon.new({"name" => "Diglett", "type" => "Ground", "treatment_notes" => "Poisoned", "vet_id" => vet1.id})
-pokemon2 = Pokemon.new({"name" => "Psyduck", "type" => "Water", "treatment_notes" => "Frozen", "vet_id" => vet1.id})
+pokemon1 = Pokemon.new({"name" => "Bulbasar", "type" => "Grass", "date_caught" => 5, "treatment_notes" => "Frozen", "vet_id" => vet1.id})
+pokemon2 = Pokemon.new({"name" => "Squirtle", "type" => "Water", "date_caught" => 3, "treatment_notes" => "Paralyzed", "vet_id" => vet1.id})
+pokemon3 = Pokemon.new({"name" => "Charmander", "type" => "Fire", "date_caught" => 7, "treatment_notes" => "Asleep", "vet_id" => vet1.id})
+pokemon4 = Pokemon.new({"name" => "Pikachu", "type" => "Electric", "date_caught" => 2, "treatment_notes" => "Poisoned", "vet_id" => vet2.id})
+pokemon5 = Pokemon.new({"name" => "Alakazam", "type" => "Psychic", "date_caught" => 6, "treatment_notes" => "Frozen", "vet_id" => vet2.id})
+pokemon6 = Pokemon.new({"name" => "Diglett", "type" => "Ground", "date_caught" => 6, "treatment_notes" => "Poisoned", "vet_id" => vet1.id})
+pokemon7 = Pokemon.new({"name" => "Psyduck", "type" => "Water", "date_caught" => 9, "treatment_notes" => "Alseep", "vet_id" => vet2.id})
 # pokemon1.delete()
+pokemon1.save()
 pokemon2.save()
+pokemon3.save()
+pokemon4.save()
+pokemon5.save()
+pokemon6.save()
+pokemon7.save()
 # pokemon2.delete()
 # pokemon1.name = "bulbasaur"
 # pokemon1.update()
-pokemon1.save()
+
 
 # Pokemon.delete_by_id(55)
 # Pokemon.show_all()
 # Pokemon.find(58)
 
-p vet1.show_pokemons()
+# p vet1.show_pokemons()
 
 
 # binding.pry
