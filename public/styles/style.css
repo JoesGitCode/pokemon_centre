@@ -14,6 +14,16 @@ body {
 }
 
 
+.homepage-button {
+  margin: 20px;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+#homepage-buttons {
+  margin-left: 33%;
+  margin-top: 20%;
+}
 
 a {
   background: #FC6F79;
@@ -74,12 +84,63 @@ a:hover:active {
 }
 
 .index-wrapper {
-  margin-left: 40px;
+  margin-left: 6vw;
   min-height: 170px;
 }
 
 .index-items {
   display: flex;
+}
+
+.index-container-show{
+  height: 100%;
+  align-content: center;
+  margin-left: 30%;
+}
+
+.index-items-show {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.pokemon-delete {
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.edit-buttons {
+  display: flex;
+}
+
+/* Vet */
+
+.vet-container {
+  margin: 20px;
+  margin-left: 33%;
+
+}
+
+.vet-index-wrapper {
+  margin: 25px;
+
+}
+
+.vet-button-add {
+  margin: 30px;
+  margin-left: 40%;
+
+}
+
+.vet-button-show {
+  margin-top: 20px;
+}
+
+.vets-pokemon {
+  margin-bottom: 30px;
+  margin-left: 30%;
 }
 
 
@@ -92,18 +153,10 @@ footer {
   text-align: center;
 }
 
-.homepage-button {
-  margin: 20px;
-  padding: 20px;
-  font-size: 1rem;
-}
 
-#homepage-buttons {
-  margin-left: 28%;
-  margin-top: 20%;
-}
 
 /* FORM */
+
 .form-container {
   margin-right: 20%;
 }
@@ -114,7 +167,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 5vw;
+  margin-right: 8vw;
 }
 
 .form-container .form-item {
@@ -122,7 +175,6 @@ footer {
     margin: 5px;
     margin-top: 2vh;
     align-items: right;
-
 }
 
 .form-item input {
@@ -136,25 +188,3 @@ footer {
     outline: none;
     border-color: #FC6F79;
 }
-
-
-/* .form-submit-button {
-    margin-top: 10px;
-    width: 18vw;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #4c80d4;
-    color: #fff;
-}
-
-.form-submit-button:focus {
-    outline: none;
-}
-
-.form-submit-button:hover {
-    background-color: #7c9fd8;
-}
-
-.form-submit-button:active{
-    background-color: #2566cf;
-} */ */

@@ -1,13 +1,14 @@
 <h1><%=@vet.name%>'s Pokemon</h1>
 
+<div class="vets-wrapper">
 <%pokemon_array = @vet.show_pokemons %>
-
 <% pokemon_array.each do |pokemon| pokemon%>
+  <div class="vets-pokemon">
+    Name: <%= pokemon['name'] %>
+    <a href="/pokemon/<%=pokemon['id']%>">More Information</a>
 
-<div class="index-items">
-  Name: <%= pokemon['name'] %>
-  <a href="/pokemon/<%=pokemon['id']%>">More Information</a>
+    <a href="/pokemon/<%=pokemon['id']%>/heal">Heal</a>
+  </div>
+  <% end %>
 
-  <a href="/pokemon/<%=pokemon['id']%>/heal">heal</a>
-<% end %>
 </div>

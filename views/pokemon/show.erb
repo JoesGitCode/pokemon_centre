@@ -2,29 +2,32 @@
 
 
 
-<div class="index-container">
-  <div class="index-items">
+<div class="index-container-show">
+  <div class="index-items-show">
     Name: <%= @pokemon.name %>
   </div>
 
-  <div class="index-items">
+  <div class="index-items-show">
     Type: <%= @pokemon.type %>
   </div>
 
-  <div class="index-items">
-    Date Caught: <%= @pokemon.date_caught %>
+  <div class="index-items-show">
+    Age: <%= @pokemon.date_caught %>
   </div>
 
-  <div class="index-items">
+  <div class="index-items-show">
     Treatment Notes: <%= @pokemon.treatment_notes %>
   </div>
 
-  <div class="index-items">
+  <div class="index-items-show">
     Assigned to: <a href="/vets/<%=@pokemon.vet.id%>"><%= @pokemon.vet.name %></a>
   </div>
 
-  <a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
-  <form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+  <div class="edit-buttons">
+    <a href="/pokemon/<%=@pokemon.id%>/edit">Edit</a>
+    <form action="/pokemon/<%= @pokemon.id %>/delete" method="POST"><input type="submit" value="Delete" class="pokemon-delete"></form>
+  </div>
+
 
 
 </div>

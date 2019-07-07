@@ -1,12 +1,14 @@
 <h1>All Vets</h1>
 
-<div class="index-items">
+<div class="vet-container">
   <% @vets.each do |vet| vet %>
-  Name: <%= vet.name %>
-
-  <a href="/vets/<%=vet.id%>">Show</a>
+  <div class="vet-index-wrapper">
+    Name: <%= vet.name %>
+    <a href="/vets/<%=vet.id%>" class="vet-button-show">Show</a>
+  </div>
   <% end %>
+
 
 </div>
 
-<a href="/vets/new">Add Vet</a>
+<a href="/vets/new" class="vet-button-add">Add Vet</a>
