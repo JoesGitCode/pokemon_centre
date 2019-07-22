@@ -1,11 +1,4 @@
-
 source 'https://rubygems.org'
-ruby '2.4.1'
 gem 'sinatra'
-gem 'sinatra-contrib'
-gem 'mustermann'
-gem 'rack'
-gem 'bundler'
-gem 'tilt'
-gem 'rack-protection'
-gem 'pg'
+gem 'pg', '~> 0.18'
+gem 'sinatra/contrib'
