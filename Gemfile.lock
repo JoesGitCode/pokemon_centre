@@ -26,9 +26,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pg (~> 0.18)
+  bundler
+  mustermann
+  pg
+  rack
+  rack-protection
   sinatra
   sinatra-contrib
+  tilt
 
 RUBY VERSION
    ruby 2.4.1p111
