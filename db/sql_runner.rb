@@ -4,11 +4,13 @@ class SqlRunner
 
   def self.run(sql, values = [])
     begin
-      db = PG.connect({ dbname: 'pokemon_centre', host: 'localhost'
-        # dbname: 'dlian1l5mla13',
-                        # host: 'ec2-23-21-160-38.compute-1.amazonaws.com ',
-# user: 'pcdezmcmattdmu',
-# password: '3c60c5fb974d01c269b2f16a92ce90e4a870b162ead2d325445d449bbd0c53f3'
+      db = PG.connect({
+        dbname: 'df85la41qhq9u3',
+                        host: 'ec2-54-235-181-55.compute-1.amazonaws.com
+ ',
+user: 'yuvvpjuveqsalw',
+password: '0f4bbc4e04d3d68c1ed89c0f09ae8ea5439371d096218b67a33e0a2998ddf54b
+'
 })
       db.prepare("query", sql)
       result = db.exec_prepared("query", values)
