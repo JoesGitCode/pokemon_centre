@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 gem 'sinatra'
 gem 'pg', '~> 0.18'
+gem 'sinatra/contrib/all'
 ruby '2.5.5'
