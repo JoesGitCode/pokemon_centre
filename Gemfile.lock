@@ -28,7 +28,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   mustermann
-  pg
+  pg (~> 0.18)
   rack
   rack-protection
   sinatra
