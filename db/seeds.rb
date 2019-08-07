@@ -1,6 +1,5 @@
 require_relative('../models/pokemon.rb')
 require_relative('../models/vet.rb')
-require('pry-byebug')
 
 Pokemon.delete_all()
 Vet.delete_all()
