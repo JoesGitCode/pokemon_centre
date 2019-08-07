@@ -3,7 +3,6 @@ require('sinatra/contrib/all')
 require_relative('../models/pokemon.rb')
 require_relative('../models/vet.rb')
 also_reload('./models/*')
-require("pry")
 
 get '/pokemon' do
   @pokemon = Pokemon.show_all()
@@ -31,7 +30,6 @@ get '/pokemon/:id/edit' do
 end
 
 post '/pokemon/:id' do
-  # binding.pry
   pokemon = Pokemon.new(params)
   pokemon.update
   redirect to "/pokemon/#{params['id']}"
