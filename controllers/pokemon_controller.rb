@@ -41,7 +41,6 @@ post '/pokemon/:id/delete' do
   redirect to '/pokemon'
 end
 
-
 get '/pokemon/:id' do
   @pokemon = Pokemon.find(params['id'])
   erb(:"pokemon/show")

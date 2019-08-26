@@ -12,7 +12,6 @@ get '/vets/new' do
   erb(:"vets/new")
 end
 
-
 post '/vets' do
   Vet.new(params).save()
   redirect to '/vets'

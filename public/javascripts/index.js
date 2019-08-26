@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     burger.addEventListener("click", () => {
       navbar.classList.toggle("mobile-nav-on");
+
+      burger.classList.toggle("nav-on");
     });
   };
 

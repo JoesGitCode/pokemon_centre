@@ -4,15 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
-  background: url('/images/chansey.jpg') no-repeat center center/cover;
+  background: url("/images/chansey.jpg") no-repeat center center/cover;
   height: 100vh;
   width: 100vw;
 }
-
 
 .homepage-button {
   margin: 20px;
@@ -20,13 +19,18 @@ body {
   font-size: 1rem;
 }
 
-#homepage-buttons {
+#homepage-buttons a {
+  position: relative;
   margin-left: 33%;
-  margin-top: 20%;
+  margin-top: 15%;
+  display: flex;
+  width: 150px;
+  justify-content: center;
+  align-content: center;
 }
 
 a {
-  background: #FC6F79;
+  background: #fc6f79;
   color: white;
   margin: 5px;
   padding: 3px;
@@ -36,7 +40,7 @@ a {
 }
 
 a:hover {
-  background: #FC6F79;
+  background: #fc6f79;
   opacity: 0.8;
   text-align: center;
 }
@@ -71,10 +75,10 @@ a:hover:active {
 .index-container {
   display: grid;
   grid-template-areas:
-  "h1"
-  "auto auto"
-  "auto auto"
-  "auto auto";
+    "h1"
+    "auto auto"
+    "auto auto"
+    "auto auto";
   grid-auto-rows: 1fr 1fr;
 }
 
@@ -92,10 +96,10 @@ a:hover:active {
   display: flex;
 }
 
-.index-container-show{
+.index-container-show {
   height: 100%;
   align-content: center;
-  margin-left: 30%;
+  margin-left: 25%;
 }
 
 .index-items-show {
@@ -104,7 +108,9 @@ a:hover:active {
 }
 
 .pokemon-delete {
-  background-color: red;
+  background-color: #ee3541;
+  border-radius: 3px;
+  font-size: 1rem;
   color: #fff;
   padding: 5px;
   text-decoration: none;
@@ -115,23 +121,25 @@ a:hover:active {
   display: flex;
 }
 
+.edit-buttons a {
+  padding: 5px;
+}
+
 /* Vet */
 
 .vet-container {
   margin: 20px;
   margin-left: 33%;
-
 }
 
 .vet-index-wrapper {
   margin: 25px;
-
 }
 
 .vet-button-add {
   margin: 30px;
   margin-left: 40%;
-
+  background: #60a0d8;
 }
 
 .vet-button-show {
@@ -143,17 +151,14 @@ a:hover:active {
   margin-left: 30%;
 }
 
-
 footer {
   position: fixed;
   background: #f4f4f4;
   width: 100vw;
-  height: 20px;
+  height: 3vh;
   bottom: 0;
   text-align: center;
 }
-
-
 
 /* FORM */
 
@@ -171,20 +176,32 @@ footer {
 }
 
 .form-container .form-item {
-    /* margin-right: 30%; */
-    margin: 5px;
-    margin-top: 2vh;
-    align-items: right;
+  /* margin-right: 30%; */
+  margin: 5px;
+  margin-top: 2vh;
+  align-items: right;
 }
 
 .form-item input {
-    border: 1px #f4f4f4 solid;
-    border-radius: 10px;
-    padding: 6px;
-    margin-left: 15px;
+  border: 1px #f4f4f4 solid;
+  border-radius: 10px;
+  padding: 6px;
+  margin-left: 15px;
 }
 
 .form-item input:focus {
-    outline: none;
-    border-color: #FC6F79;
+  outline: none;
+  border-color: #fc6f79;
+}
+
+@media screen and (max-width: 768px) {
+  .clipboard {
+    position: fixed;
+    top: 14vh;
+    width: 90vw;
+    height: 80vh;
+    background: #f4f4f4;
+    border-radius: 10px;
+    overflow: scroll;
+  }
 }
