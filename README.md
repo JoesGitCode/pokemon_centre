@@ -1,7 +1,7 @@
 Pokemon Centre
 
 To run:
-ruby app.js
+ruby app.rb
 
 CRUD pokemon and vets
 Use a vet to 'heal' a pokemon.

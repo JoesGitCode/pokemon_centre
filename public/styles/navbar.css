@@ -1,7 +1,8 @@
 #main-nav {
   background: #f4f4f4;
   display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-columns: 1fr 4fr 3fr;
+  justify-content: space-around;
 }
 
 #pokecentre {
@@ -27,20 +28,69 @@ nav ul {
 }
 
 #main-nav ul li a {
-  background: #FC6F79;
+  background: #fc6f79;
   color: white;
   margin: 5px;
-  padding: 12px;
+  padding: 10px;
   border-radius: 5px;
   display: block;
   text-align: center;
 }
 
 #main-nav ul li a:hover {
-  background: #FC6F79;
+  background: #fc6f79;
 }
 
 #main-nav ul li a:hover:active {
   background: orange;
   border-radius: 20px;
+}
+
+.nav-burger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: #fc6f79;
+}
+
+@media screen and (max-width: 1100px) {
+  nav h1 {
+    font-size: 2.5rem;
+  }
+
+  nav ul li a {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav ul {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    width: 50%;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  .nav-burger {
+    display: block;
+  }
 }
