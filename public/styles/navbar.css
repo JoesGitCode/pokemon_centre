@@ -14,7 +14,6 @@
 }
 
 nav h1 {
-  /* margin-top: 10px; */
   position: relative;
   text-align: center;
   justify-content: center;
@@ -24,9 +23,7 @@ nav h1 {
 /*** Buttons ***/
 
 nav ul {
-  /* float: right; */
   display: flex;
-  /* margin-top: 15px; */
 }
 
 #main-nav ul li a {
@@ -48,22 +45,16 @@ nav ul {
   border-radius: 20px;
 }
 
+.nav-burger div {
+  width: 25px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: #fc6f79;
+  margin: 5px;
+}
+
 .nav-burger {
   display: none;
-  cursor: pointer;
-}
-
-.nav-burger div {
-  width: 30px;
-  height: 4px;
-  margin: 7px;
-  margin-right: 20px;
-  border-radius: 3px;
-  background-color: #fc6f79;
-}
-
-.mobile-nav-on {
-  transform: translateX(0%);
 }
 
 @media screen and (max-width: 1100px) {
@@ -80,7 +71,12 @@ nav ul {
   body {
     overflow-x: hidden;
   }
-  #nav-buttons {
+
+  nav h1 {
+    font-size: 2rem;
+  }
+
+  .nav-buttons {
     position: absolute;
     right: 0px;
     height: 92vh;
@@ -95,8 +91,8 @@ nav ul {
     transition: transform 0.5s ease-in;
   }
 
-  nav ul li {
-    /* display: none; */
+  .mobile-nav-on {
+    transform: translateX(0%);
   }
 
   .nav-burger {
