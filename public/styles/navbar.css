@@ -1,7 +1,8 @@
 #main-nav {
   background: #f4f4f4;
-  display: grid;
-  grid-template-columns: 1fr 4fr 3fr;
+  display: flex;
+  align-items: center;
+  min-height: 8vh;
   justify-content: space-around;
 }
 
@@ -9,10 +10,11 @@
   border-radius: 5px;
   height: 8vh;
   margin: 10px;
+  min-height: 7vh;
 }
 
 nav h1 {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   position: relative;
   text-align: center;
   justify-content: center;
@@ -24,7 +26,7 @@ nav h1 {
 nav ul {
   /* float: right; */
   display: flex;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 #main-nav ul li a {
@@ -52,11 +54,16 @@ nav ul {
 }
 
 .nav-burger div {
-  width: 25px;
-  height: 3px;
-  margin: 5px;
+  width: 30px;
+  height: 4px;
+  margin: 7px;
+  margin-right: 20px;
   border-radius: 3px;
   background-color: #fc6f79;
+}
+
+.mobile-nav-on {
+  transform: translateX(0%);
 }
 
 @media screen and (max-width: 1100px) {
@@ -73,7 +80,7 @@ nav ul {
   body {
     overflow-x: hidden;
   }
-  nav ul {
+  #nav-buttons {
     position: absolute;
     right: 0px;
     height: 92vh;
@@ -84,10 +91,12 @@ nav ul {
     flex-direction: column;
     align-items: center;
     transform: translateX(100%);
+    justify-content: space-around;
+    transition: transform 0.5s ease-in;
   }
 
   nav ul li {
-    display: none;
+    /* display: none; */
   }
 
   .nav-burger {
